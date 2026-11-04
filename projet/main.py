@@ -11,7 +11,7 @@ L1 = 1.0  # Longueur tige 1
 L2 = 1.0  # Longueur tige 2
 
 # =====================================================================
-# 2. MOTEUR PHYSIQUE (Les Mathématiques)
+# 2. MOTEUR PHYSIQUE 
 # =====================================================================
 def derivees(Y):
     """Calcule l'évolution instantanée du pendule."""
@@ -46,7 +46,7 @@ def positions_cartesiennes(Y):
     return x1, y1, x2, y2
 
 # =====================================================================
-# 3. SCHÉMAS D'INTÉGRATION (La manière d'avancer dans le temps)
+# 3. SCHÉMAS D'INTÉGRATION 
 # =====================================================================
 def resoudre_euler(Y0, dt, n_steps):
     """Méthode basique : trace tout droit (génère des bugs d'énergie)."""
@@ -70,7 +70,7 @@ def resoudre_rk4(Y0, dt, n_steps):
     return trajectoire
 
 # =====================================================================
-# 4. EXPÉRIENCES (Ce qui rapporte les points)
+# 4. EXPÉRIENCES
 # =====================================================================
 def experience_A_energie():
     """Montre pourquoi la méthode d'Euler explose (Dérive numérique)."""
@@ -85,8 +85,8 @@ def experience_A_energie():
     E0 = energie_mecanique(Y0)
     
     plt.figure(figsize=(8, 5))
-    plt.plot(temps, energie_mecanique(traj_euler) - E0, label="Euler (Bugué, gagne de l'énergie)")
-    plt.plot(temps, energie_mecanique(traj_rk4) - E0, label="RK4 (Stable)")
+    plt.plot(temps, energie_mecanique(traj_euler) - E0, label="Euler")
+    plt.plot(temps, energie_mecanique(traj_rk4) - E0, label="RK4")
     plt.axhline(0, color='black', linestyle='--')
     plt.title("Dérive de l'énergie : Euler vs RK4")
     plt.xlabel("Temps (s)")
