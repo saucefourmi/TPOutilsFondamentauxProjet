@@ -21,8 +21,10 @@ Le script propose un menu interactif dans le terminal permettant de lancer trois
 Le système compare deux méthodes pour calculer la trajectoire : Euler explicite (ordre 1) et Runge-Kutta (RK4, ordre 4). 
 * **Observation :** Avec Euler, l'énergie du système augmente toute seule au fil du temps, jusqu'à faire exploser les valeurs.
 * **Interprétation :**
-Euler : La méthode d'Euler revient à regarder la route juste devant son capot, braquer le volant dans cette direction, puis fermer les yeux pendant deux secondes en bloquant ses mains. À chaque virage, la voiture va tirer tout droit avant la prochaine correction et finir inévitablement par dériver vers le fossé (l'erreur s'accumule et l'énergie du système explose).
-* RK4 : RK4 agit comme un pilote expérimenté qui regarde loin devant. Pour prendre sa courbe, il analyse la direction à l'entrée du virage, l'évalue deux fois au point de corde (le milieu), et anticipe la sortie. Il combine ces quatre points d'observation pour donner un coup de volant parfaitement lissé. La voiture épouse la trajectoire idéale sans jamais déraper (l'énergie est strictement conservée et le système reste stable).
+  
+* La méthode d'Euler revient à regarder la route juste devant son capot, braquer le volant dans cette direction, puis fermer les yeux pendant deux secondes en bloquant ses mains. À chaque virage, la voiture va tirer tout droit avant la prochaine correction et finir inévitablement par dériver vers le fossé (l'erreur s'accumule et l'énergie du système explose).
+
+* RK4 agit comme un pilote expérimenté qui regarde loin devant. Pour prendre sa courbe, il analyse la direction à l'entrée du virage, l'évalue deux fois au point de corde (le milieu), et anticipe la sortie. Il combine ces quatre points d'observation pour donner un coup de volant parfaitement lissé. La voiture épouse la trajectoire idéale sans jamais déraper (l'énergie est strictement conservée et le système reste stable).
 
 ### Expérience 2 : La sensibilité aux conditions initiales (Le Chaos)
 Deux pendules sont lâchés au même instant. Le premier à 90°, le second à 90.00001°.
