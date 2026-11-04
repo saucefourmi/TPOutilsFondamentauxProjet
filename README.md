@@ -8,7 +8,7 @@ Ce projet modélise la cinématique d'un pendule double pour explorer concrètem
 
 ## 2. Installation et Lancement
 Le projet utilise uniquement les bibliothèques standard vues en TP.
-* **Prérequis :** `numpy`, `matplotlib`
+* **Prérequis :** `matplotlib`
 * **Lancement :** 
   ```bash
   python main.py
